@@ -14,7 +14,7 @@ elevenlabs = "^1.58.1"
 python-dotenv = "^1.0"
 
 [tool.poetry.scripts]
-start = "mfriend_multilingual_final:app"
+start = "main: app"
 
 [build-system]
 requires = ["poetry-core"]
