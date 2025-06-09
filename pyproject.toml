@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "mfriend-voice"
+version = "0.1.0"
+description = "MFriend Voice-enabled multilingual chatbot using Flask and ElevenLabs"
+authors = ["Roland Kim <contact@mfriend.app>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.1"
+twilio = "^9.0"
+requests = "^2.31"
+elevenlabs = "^1.58.1"
+python-dotenv = "^1.0"
+
+[tool.poetry.scripts]
+start = "mfriend_multilingual_final:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
