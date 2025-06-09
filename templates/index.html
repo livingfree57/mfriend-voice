@@ -40,12 +40,13 @@
 </head>
 <body>
  <div style="text-align: center; padding: 2rem;">
-  <img src="/static/mfriend_icon_192x192.png" alt="MFriend Icon" style="width: 100px; margin-bottom: 20px;">
+<img src="{{ url_for('static', filename='mfriend_icon_192x192.png') }}" alt="MFriend Icon" style="width: 100px; margin-bottom: 20px;">
+  
   <h1>Welcome to MFriend</h1>
-  <p>Tap below to start talking with your AI friend in your language.</p>
-  <button onclick="location.href='/select-language'" style="padding: 10px 20px; font-size: 1rem; margin-top: 20px;">
-    Start Talking
-  </button>
+
+  <p>Click the "Call AI Agent" button to start at the new page after selecting your language...</p>
+
+
 </div>
 
 
