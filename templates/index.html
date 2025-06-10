@@ -37,20 +37,22 @@
 
 <style>
   #installBanner {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white; /* White background */
-    color: #007bff;     /* Blue text */
-    padding: 12px 18px;
-    border-radius: 8px;
-    font-size: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-    text-align: center;
-    max-width: 90%;
-  }
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: #007bff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  text-align: center;
+  max-width: 90%;
+}
+
 
   #installBanner button {
     background: #007bff; /* Blue button background */
@@ -62,7 +64,6 @@
     cursor: pointer;
   }
 </style>
-
 
 
 
@@ -109,10 +110,10 @@
   </script>
   <!-- Mobile Install Banner -->
 
-<div id="installBanner" style="text-align: center; background-color: #f0f0f0; padding: 12px; border-radius: 10px; margin: 20px auto; width: 90%; max-width: 400px;">
-  <p style="margin: 0; font-size: 16px;">
-    Add this app to your home screen for quick access.
-  </p>
+<div id="installBanner">
+  <strong>Add to Home Screen?</strong><br>
+  Install MFriend for easier access — like a real app!
+  <button id="installBtn">Add</button>
 </div>
 
 
