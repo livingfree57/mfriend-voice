@@ -37,31 +37,20 @@
 
 <style>
   #installBanner {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  color: #007bff;
-  padding: 12px 18px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  text-align: center;
-  max-width: 90%;
-}
-
-
-  #installBanner button {
-    background: #007bff; /* Blue button background */
-    color: white;        /* White button text */
-    border: none;
-    padding: 6px 12px;
-    margin-left: 10px;
-    border-radius: 6px;
-    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f0f0f0;
+    color: #007bff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    text-align: center;
+    max-width: 90%;
+    font-weight: bold;
   }
 </style>
 
@@ -111,10 +100,10 @@
   <!-- Mobile Install Banner -->
 
 <div id="installBanner">
-  <strong>Add to Home Screen?</strong><br>
-  Install MFriend for easier access — like a real app!
-  <button id="installBtn">Add</button>
+  <strong>Add to Home Screen</strong><br>
+  To install, tap your browser’s menu (⋮ or 🧭) and choose “Add to Home screen.”
 </div>
+
 
 
 <script>
@@ -124,31 +113,6 @@
   }
 </script>
 
-<script>
-  let deferredPrompt;
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    const banner = document.getElementById('installBanner');
-    banner.style.display = 'block';
-
-    document.getElementById('installBtn').addEventListener('click', () => {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the A2HS prompt');
-          } else {
-            console.log('User dismissed the A2HS prompt');
-          }
-          deferredPrompt = null;
-          banner.style.display = 'none';
-        });
-      }
-    });
-  });
-</script>
 
 
 </body>
